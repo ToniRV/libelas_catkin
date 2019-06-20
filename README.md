@@ -33,3 +33,41 @@ source ~/.bashrc
 
 Example `CMakeLists.txt` and `package.xml` in [here](https://github.com/ToniRV/ELAS_ROS).
 
+CmakeLists.txt:
+```
+cmake_minimum_required(VERSION 2.8.3)
+project(your_package_name )
+
+find_package(catkin_simple REQUIRED)
+
+catkin_simple()
+
+cs_add_executable(your_package_name src/your_package_name .cpp)
+
+cs_install()
+
+cs_export()
+```
+
+
+package.xml:
+```
+<?xml version="1.0"?>
+<package>
+  <name>your_package_name</name>
+  <version>0.0.1</version>
+  <description>Simple ROS wrapper around ELAS</description>
+
+  <maintainer email="your_email@mit.edu">your_name</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <!-- The dependency you need for LIBELAS -->
+  <build_depend>libelas_catkin</build_depend>
+</package>
+```
+
