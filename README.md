@@ -36,13 +36,13 @@ Example `CMakeLists.txt` and `package.xml` in [here](https://github.com/ToniRV/E
 CmakeLists.txt:
 ```
 cmake_minimum_required(VERSION 2.8.3)
-project(your_package_name )
+project(your_package_name)
 
 find_package(catkin_simple REQUIRED)
 
 catkin_simple()
 
-cs_add_executable(your_package_name src/your_package_name .cpp)
+cs_add_executable(your_package_name src/your_package_name.cpp)
 
 cs_install()
 
