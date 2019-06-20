@@ -17,5 +17,4 @@
   <export>
     <cpp cflags="-msse3 -I${prefix}/libelas/src/" lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -lelas"/>
   </export>
-
 </package>
